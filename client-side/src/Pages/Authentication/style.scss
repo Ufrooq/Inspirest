@@ -1,0 +1,48 @@
+$green_color: rgb(64, 122, 87);
+$red_color: #e60023;
+
+.AuthenticationPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .next {
+    margin-top: 10%;
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    h1 {
+      font-size: 3.5rem;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      color: $green_color;
+      font-size: 3.5rem;
+      margin-top: 10px;
+    }
+
+    .gallery {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      .item {
+        overflow: hidden;
+        border-radius: 20px;
+        img {
+          aspect-ratio: 4/6;
+          border-radius: 20px;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .search_section {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(242, 221, 104);
+  }
+}

@@ -1,9 +1,12 @@
 import './App.scss';
+import Navbar from './Components/Navbar';
+import AuthenticationPage from './Pages/Authentication/AuthenticationPage';
 
 function App() {
   return (
     <div className="App">
-      aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      <Navbar />
+      <AuthenticationPage />
     </div>
   );
 }

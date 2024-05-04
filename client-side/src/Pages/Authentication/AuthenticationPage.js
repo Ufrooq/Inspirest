@@ -3,6 +3,7 @@ import Main from './Main'
 import './style.scss'
 import Search from './Search'
 import Ideas from './Ideas'
+import Signup from './Signup'
 
 const AuthenticationPage = () => {
     return (
@@ -10,6 +11,7 @@ const AuthenticationPage = () => {
             <Main />
             <Search />
             <Ideas />
+            <Signup />
         </div>
     )
 }

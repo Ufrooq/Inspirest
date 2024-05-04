@@ -3,7 +3,7 @@ import './style.scss'
 
 const Main = () => {
     return (
-        <section className='next'>
+        <section className='next_section'>
             <h1>Get your next</h1>
             <h2>weeknight dinner idea</h2>
             <div className="gallery">
@@ -21,7 +21,7 @@ const Main = () => {
                 </div>
 
                 <div className='item'>
-                    <img src="images/photo_1706361027816.jpg" alt="" />
+                    <img src="images/photo_1706870802411.jpg" alt="" />
                 </div>
             </div>
         </section>

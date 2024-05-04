@@ -1,13 +1,14 @@
 $green_color: rgb(64, 122, 87);
 $red_color: #e60023;
-
+$blue_color: #ccf6ee;
+$dark_blue: rgb(0, 107, 108);
 .AuthenticationPage {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  .next {
-    margin-top: 10%;
+  .next_section {
+    padding-top: 50px;
     width: 90%;
     margin: auto;
     height: 100vh;
@@ -23,7 +24,7 @@ $red_color: #e60023;
     }
 
     .gallery {
-      margin-top: 30px;
+      margin-top: 50px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 15px;
@@ -41,8 +42,121 @@ $red_color: #e60023;
   }
 
   .search_section {
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-color: rgb(242, 221, 104);
+    background-color: rgb(255, 235, 123);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    padding: 0px 30px;
+
+    .gallery {
+      .item {
+        overflow: hidden;
+        border-radius: 40px;
+        width: 300px;
+        position: absolute;
+        img {
+          border-radius: 40px;
+          max-height: 400px;
+          object-fit: cover;
+        }
+      }
+      .item_1 {
+        left: 400px;
+        bottom: 50px;
+      }
+
+      .item_2 {
+        left: 500px;
+        top: 50px;
+      }
+      .item_3 {
+        left: 120px;
+        top: 100px;
+      }
+      .item_4 {
+        left: 240px;
+        top: 200px;
+      }
+    }
+    .search {
+      color: #c31952;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+
+      button {
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        font-size: 1.05rem;
+        padding: 10px 16px;
+        font-weight: 400;
+        border-radius: 20px;
+        cursor: pointer;
+        border: none;
+        background-color: $red_color;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+  .Ideas_section {
+    @extend .search_section;
+    background-color: $blue_color;
+
+    .save {
+      @extend .search;
+      color: $dark_blue;
+    }
+
+    .Ideas_section_gallery {
+      display: grid;
+      grid-template-columns: 300px 200px;
+      grid-template-rows: 230px;
+      gap: 20px;
+
+      .item {
+        overflow: hidden;
+        border-radius: 40px;
+        position: relative;
+
+        .mask {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          bottom: 0px;
+          background-color: #00000068;
+          border-radius: 40px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          object-fit: cover;
+          border-radius: 40px;
+          background-position: center;
+        }
+        p {
+          font-weight: bold;
+          position: absolute;
+          font-size: 2.5rem;
+          top: 20%;
+          left: 20%;
+          color: #fff;
+        }
+      }
+    }
   }
 }

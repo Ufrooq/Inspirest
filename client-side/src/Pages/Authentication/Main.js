@@ -5,8 +5,6 @@ import ScrollReveal from 'scrollreveal';
 const Main = () => {
 
 
-
-
     useEffect(() => {
         ScrollReveal().reveal(".animate_card_1", { delay: 300, distance: "100px", duration: 1000, reset: true });
         ScrollReveal().reveal(".animate_card_2", { delay: 400, distance: "100px", duration: 1000, reset: true });

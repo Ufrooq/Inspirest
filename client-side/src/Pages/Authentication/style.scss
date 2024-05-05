@@ -3,11 +3,14 @@ $red_color: #e60023;
 $blue_color: #ccf6ee;
 $dark_blue: rgb(0, 107, 108);
 .AuthenticationPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .next_section {
+    scroll-snap-align: start;
     padding-top: 50px;
     width: 90%;
     margin: auto;
@@ -42,6 +45,7 @@ $dark_blue: rgb(0, 107, 108);
   }
 
   .search_section {
+    scroll-snap-align: start;
     position: relative;
     width: 100%;
     height: 100vh;

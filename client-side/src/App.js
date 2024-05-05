@@ -5,7 +5,7 @@ import AuthenticationPage from './Pages/Authentication/AuthenticationPage';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
       <AuthenticationPage />
       <Footer />

@@ -162,14 +162,25 @@ $dark_blue: rgb(0, 107, 108);
 
   .signup_section {
     @extend .search_section;
-    background-image: url("../../../public/images/photo_1706870813264.jpg");
+    background-image: url("../../../public/images/pexels-brett-sayles-3797928.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
     grid-template-columns: 60% 30%;
-
+    position: relative;
+    .mask {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      background-color: #00000084;
+      z-index: 1;
+    }
     .signup_gallery {
+      z-index: 2;
       .signup_heading {
         position: relative;
         left: 60px;
@@ -177,12 +188,13 @@ $dark_blue: rgb(0, 107, 108);
         height: 60%;
         h1 {
           color: white;
-          font-size: 6rem;
+          font-size: 5rem;
         }
       }
     }
 
     .signup_form {
+      z-index: 2;
       font-size: 1.2rem;
       display: flex;
       flex-direction: column;

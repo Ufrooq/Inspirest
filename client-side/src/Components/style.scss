@@ -55,3 +55,17 @@ nav {
     }
   }
 }
+
+.footer {
+  height: 5vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+    column-rule: black;
+    font-weight: 500;
+  }
+}

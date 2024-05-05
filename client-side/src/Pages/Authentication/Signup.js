@@ -3,6 +3,7 @@ import React from 'react'
 const Signup = () => {
     return (
         <section className='signup_section'>
+            <div className="mask"></div>
             <div className="signup_gallery">
                 <div className="signup_heading">
                     <h1>Sign up to get your ideas</h1>

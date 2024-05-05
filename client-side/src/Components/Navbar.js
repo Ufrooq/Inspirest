@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <nav>
             <div className="logo">
-                <i class="fa-brands fa-pinterest"></i>Pinterset
+                <i class="fa-brands fa-pinterest"></i>Inspirest
             </div>
             <div className="nav-components">
                 <ul>

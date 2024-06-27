@@ -1,12 +1,10 @@
 import React from 'react'
-import "./style.scss"
 
-const SignUp = () => {
+const Login = ({ handleSign }) => {
     return (
         <div className="signup_form">
             <div>
-                <h1>Welcome to Pinterset</h1>
-                <p>Find new ideas to try</p>
+                <h1>Login</h1>
             </div>
             <form action="">
                 <label htmlFor="">Email :
@@ -15,10 +13,7 @@ const SignUp = () => {
                 <label htmlFor="">Password :
                     <input type="password" placeholder='Create a Password' />
                 </label>
-                <label htmlFor="">Birthdate :
-                    <input type="date" />
-                </label>
-                <button> Continue</button>
+                <button> Login </button>
             </form>
             <div className="other">
                 <p className='or'>OR</p>
@@ -27,11 +22,11 @@ const SignUp = () => {
                     <p> <span>Terms of Services</span> and acknowledge</p>
                     <p>you've read our <span> Privacy Policy </span> </p>
                 </div>
-                <p>Already a member? <a href="">Sign in</a></p>
+                <p>Do not have an account? <span onClick={handleSign}>Sign Up</span></p>
             </div>
 
         </div>
     )
 }
 
-export default SignUp;
+export default Login

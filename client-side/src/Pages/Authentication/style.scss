@@ -280,9 +280,11 @@ $dark_blue: rgb(0, 107, 108);
           font-size: 1rem;
           color: #3f3f3f;
 
-          a {
+          span {
             font-weight: bold;
             color: black;
+            text-decoration: underline;
+            cursor: pointer;
           }
         }
       }

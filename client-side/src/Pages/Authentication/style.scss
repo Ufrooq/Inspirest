@@ -2,6 +2,23 @@ $green_color: rgb(64, 122, 87);
 $red_color: #e60023;
 $blue_color: #ccf6ee;
 $dark_blue: rgb(0, 107, 108);
+
+@mixin _button($bg-color, $color) {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: 1.05rem;
+  padding: 10px 16px;
+  font-weight: 400;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: $bg-color;
+  font-weight: bold;
+  color: $color;
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
 .AuthenticationPage {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -100,17 +117,7 @@ $dark_blue: rgb(0, 107, 108);
       }
 
       button {
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-        font-size: 1.05rem;
-        padding: 10px 16px;
-        font-weight: 400;
-        border-radius: 20px;
-        cursor: pointer;
-        border: none;
-        background-color: $red_color;
-        font-weight: bold;
-        color: white;
+        @include _button($red_color, white);
       }
     }
   }
@@ -206,7 +213,7 @@ $dark_blue: rgb(0, 107, 108);
       align-items: center;
       text-align: center;
       background-color: white;
-      padding: 30px 20px;
+      padding: 30px 0px;
       border-radius: 30px;
 
       h1 {
@@ -219,7 +226,7 @@ $dark_blue: rgb(0, 107, 108);
         width: 60%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
 
         label {
           display: flex;
@@ -233,7 +240,7 @@ $dark_blue: rgb(0, 107, 108);
             font-size: 1.1rem;
             outline: none;
             border: 1px solid #a7a6a6;
-
+            margin: 10px 0px;
             &::placeholder {
               font-size: 0.9rem;
               font-weight: 600;
@@ -243,28 +250,25 @@ $dark_blue: rgb(0, 107, 108);
         }
 
         button {
-          padding: 10px 16px;
-          border-radius: 20px;
-          border: none;
-          background-color: $red_color;
-          color: white;
-          font-size: 1.1rem;
-          cursor: pointer;
-          transition: all 0.1s;
-
-          &:hover {
-            filter: brightness(0.8);
-          }
+          @include _button($red_color, white);
         }
+        .continue_with_google {
+          @include _button(white, black);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+        }
+      }
+      .or {
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
       }
       .other {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        .or {
-          font-size: 1rem;
-          font-weight: 500;
-        }
         .terms {
           p {
             color: #3f3f3f;
